@@ -2,8 +2,7 @@
 <html lang="en">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<h1> Selamat datang</h1>
-<h2><p>Apakah anda sedang mencari texture game PS2?</p>anda datang ke toko yang tepat,disini harganya murah cuma 15K</h2>
+
 <style>
 <style>
     .btn-open {
@@ -37,8 +36,54 @@
   
 </head>
 <body>
+    <div class="topnav" id="myTopnav">
+        <a href="#" class="active" onclick="navigateTo('home')">Home</a>
+        <a href="#" onclick="navigateTo('news')">News</a>
+        <a href="#" onclick="navigateTo('contact')">Contact</a>
+        <a href="#" onclick="navigateTo('about')">About</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
 
-  <img src="nexus.png" alt="ini gambar" width="300px"/>
+    <div id="content">
+        <!-- Konten halaman akan dimuat di sini -->
+    </div>
+
+    <script>
+        function navigateTo(page) {
+            var content = document.getElementById('content');
+            var newContent = document.getElementById(page);
+
+            // Hapus kelas 'active' dari semua menu
+            var navItems = document.querySelectorAll('.topnav a');
+            navItems.forEach(function(item) {
+                item.classList.remove('active');
+            });
+
+            // Tambahkan kelas 'active' ke menu yang dipilih
+            event.target.classList.add('active');
+
+            // Tampilkan konten halaman yang sesuai
+            content.innerHTML = newContent.innerHTML;
+        }
+
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+
+    <!-- Konten halaman yang terpisah -->
+    <div id="home" style="display:none;">
+       Halaman utama 
+        <p><h1> Selamat datang</h1>
+<h2><p>Apakah anda sedang mencari texture game PS2?</p>anda datang ke toko yang tepat,disini harganya murah cuma 15K</h2>
+<img src="nexus.png"width="300px"/>
   <h2>Ultraman nexus</h2>
 <h3><p>InD:Ini adalah texture untuk ultraman nexus yang saya buat dalam bahasa indonesia,<br> dan menambahkan hero baru yang tidak jadi dimasukan baik ke dalam film atau game ini.</p></h3>
 <h3>berikut adalah <br>foto dan cuplikan saat menggunakan texturenya</h3>
@@ -46,7 +91,6 @@
 
 <img src="ufe3.png" alt="ini gambar" width="300"/>
 <div class="container"></div>
-</div>
 <h2><i>Ini adalah texture game ufe3 yang saya translate ke bahasa indonesia</i></h2>
 <h3> berikut adalah foto dan cuplikannya</h3>
 
@@ -55,7 +99,26 @@
   
   
   
+</body></p>
+    </div>
+
+    <div id="news" style="display:none;">
+        <h2>News</h2>
+        <p>Pengerjaan
+    </div>
+
+    <div id="contact" style="display:none;">
+        <h2>Contact</h2>
+        <p>pengerjaan</p>
+    </div>
+
+    <div id="about" style="display:none;">
+        <h2>About</h2>
+        <p>apa coba</p>
+    </div>
 </body>
+</html>
+
 <h2><br>minat untuk beli? hubungi no ini, dan jangan lupa subscribe Channel saya</h2>
 <button class="btn-open"><i class="fab fa-whatsapp"></i> hubungi Saya</button>
 
@@ -76,7 +139,43 @@
     });
 </script>
 
+<script>function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}</script>
 
+<script>function myFunction() {
+    var nav = document.getElementById("myTopnav");
+    if (nav.className === "topnav") {
+        nav.className += " responsive";
+    } else {
+        nav.className = "topnav";
+    }
+</script>
 
+<script>document.addEventListener('DOMContentLoaded', function() {
+    var navLinks = document.querySelectorAll('.topnav a');
+
+    navLinks.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            var targetId = this.getAttribute('href').substring(1);
+            var targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+});</script>
+
+<script>function navigateTo(news.html) {
+  window.location.href =news.html;
+}</script>
 
 </html>
