@@ -70,7 +70,7 @@ nav ul li a:hover {
     }
 
     .btn-buka:hover {
-        background-color: #ffffff; /* Warna hover untuk tombol */
+        background-color: #f00; /* Warna hover untuk tombol */
     }
 .topnav {
   background-color: #333;
@@ -127,3 +127,20 @@ nav ul li a:hover {
     text-align: left;
   }
 }
+    /* Gaya untuk tabel */
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+
+    .th, .td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    
+    .th {
+        background-color: #f2f2f2;
+    }
